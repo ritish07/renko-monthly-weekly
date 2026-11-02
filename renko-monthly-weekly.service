@@ -1,0 +1,22 @@
+[Unit]
+Description=NIFTY three-bot Dhan-preferred paper Renko workspace
+After=network-online.target
+Wants=network-online.target
+[Service]
+WorkingDirectory=/opt/ritishlabs-renko-monthly-weekly
+ExecStart=/usr/bin/node --env-file-if-exists=/opt/ritishlabs-renko-monthly-weekly/.env /opt/ritishlabs-renko-monthly-weekly/server.js
+Environment=RENKO_DATA=/var/lib/ritishlabs-renko-monthly-weekly
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+StateDirectory=ritishlabs-renko-monthly-weekly
+StateDirectoryMode=0700
+UMask=0077
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,2 @@
+-r requirements-fyers.txt
+playwright==1.58.0

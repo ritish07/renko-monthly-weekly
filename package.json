@@ -1,0 +1,15 @@
+{
+  "name": "renko-monthly-weekly",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Three NIFTY Renko paper bots; Dhan preferred, FYERS optional",
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js --local",
+    "demo": "node --env-file-if-exists=.env server.js --local --demo",
+    "start:production": "node --env-file-if-exists=.env server.js",
+    "test": "node --test test_paper.js test_server.js"
+  }
+}

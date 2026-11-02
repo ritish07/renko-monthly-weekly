@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.secrets/
+.data/
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+*.log
+*.sqlite*
+paper.json
+*.frames.gz
+test-results/
+playwright-report/
+.DS_Store
